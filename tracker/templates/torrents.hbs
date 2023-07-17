@@ -1,0 +1,20 @@
+{{#*inline "page"}}
+{{> menu}}
+<h1>torrents</h1>
+
+<a href="/torrents/add">Adicionar</a>
+
+{{#if torrents}}
+<ul>
+    {{#each torrents}}
+    <li>
+        <a href="/torrent/{{id}}">{{short_name}}</a>
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<p>Nenhum torrent cadastrado</p>
+{{/if}}
+{{/inline}}
+
+{{> main_layout}}

@@ -1,0 +1,19 @@
+{{#*inline "page"}}
+{{> menu}}
+<h1>Users</h1>
+{{#if error}}
+<p>Error: {{ error }}</p>
+{{/if}}
+{{#if users}}
+<li>
+    {{#each users}}
+    <ul>#{{id}} - {{ username }}</ul>
+    {{/each}}
+</li>
+{{else}}
+<p>Nenhum usuário cadastrado</p>
+{{/if}}
+<a href="/login">Login</a>
+{{/inline}}
+
+{{> main_layout}}
